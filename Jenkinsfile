@@ -62,10 +62,9 @@ pipeline {
 					continueOnError: false, failOnError: true,
 					publishers: [
 						sshPublisherDesc (
-							configName: "21046-abhishek",
+							configName: "21095-sudhanshu",
 							verbose: true,
 							transfers: [
-								sshTransfer(execCommand: "kill -9 $(lsof -t -i:5000)"),
 								sshTransfer(execCommand: "python3 -m virtualenv env"),
 								sshTransfer(execCommand: "source env/bin/activate"),
 								sshTransfer(execCommand: "pip3 install --user -r requirements.txt"),
